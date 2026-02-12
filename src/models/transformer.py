@@ -4,7 +4,7 @@ Time Series Transformer Implementation
 
 import torch
 import torch.nn as nn
-from .embeddings import TimeSeriesPatchEmbeddingLayer
+from .embeddings import WaveletPatchEmbeddingLayer, PatchEmbeddingLayer
 
 
 class TimeSeriesTransformer(nn.Module):
@@ -22,7 +22,7 @@ class TimeSeriesTransformer(nn.Module):
     ):
         super().__init__()
         
-        self.patch_embedding = TimeSeriesPatchEmbeddingLayer(
+        self.patch_embedding = WaveletPatchEmbeddingLayer(
             in_channels=in_channels,
             patch_size=patch_size,
             embedding_dim=embedding_dim,
