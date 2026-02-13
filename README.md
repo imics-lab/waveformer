@@ -3,6 +3,7 @@
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/release/python-380/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.0+-ee4c2c?logo=pytorch&logoColor=white)](https://pytorch.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![arXiv](https://img.shields.io/badge/arXiv-2602.12189-b31b1b.svg)](https://arxiv.org/abs/2602.12189)
 
 This is a PyTorch implementation of "WaveFormer: Wavelet Embedding Transformer for Biomedical Signals"
 
@@ -61,7 +62,7 @@ waveformer/
 ├── src/
 │   ├── models/
 │   │   ├── waveformer.py           # Main WaveFormer model
-│   │   ├── embedding.py            # Wavelet-enhanced patch embedding
+│   │   ├── embeddings.py           # Wavelet-enhanced patch embedding
 │   │   ├── dywpe.py                # Dynamic Wavelet Positional Encoding
 │   │   └── transformer.py          # Transformer encoder with RPE
 │   └── utils/
@@ -117,7 +118,7 @@ Our comprehensive evaluation across 8 diverse time series datasets demonstrates 
   <strong>Right:</strong> Performance advantage versus sequence length. WaveFormer's accuracy improvement over the best baseline correlates positively with sequence length, with largest gains on long sequences.</em>
 </p>
 
-For detailed experimental results and ablation studies, please refer to our [paper](/docs/WaveFormer.pdf).
+For detailed experimental results and ablation studies, please refer to our [paper](https://arxiv.org/abs/2602.12189).
 
 
 ### Contributing
@@ -136,11 +137,11 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 If you find **WaveFormer** useful for your research, please consider citing this repository using the following information:
 
 ```bibtex
-@software{irani2026waveformer,
+@article{irani2026waveformer,
   title={WaveFormer: Wavelet Embedding Transformer for Biomedical Signals},
-  author={Irani, Habib, De, Bikram and Metsis, Vangelis},
-  url={https://github.com/imics-lab/waveformer},
-  year={2026},
+  author={Habib Irani and Bikram De and Vangelis Metsis},
+  journal={arXiv preprint arXiv:2602.12189},
+  year={2026}
 }
 ```
 
